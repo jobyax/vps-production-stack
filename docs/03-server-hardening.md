@@ -1,7 +1,7 @@
-# 03 — Sécurisation SSH
+# 03 — Durcissement du serveur
 
 Durcir l'accès SSH : clé d'authentification, suppression du mot de passe
-et désactivation du login root.
+et désactivation du login root. Configurer ensuite le pare-feu UFW.
 
 ## Étapes
 
@@ -72,6 +72,34 @@ Vérifier les règles :
 
 ```bash
 sudo ufw status verbose
+```
+
+## Optionnel — Connexion SSH simplifiée
+
+Se connecter en précisant la clé :
+
+```bash
+ssh -i ~/.ssh/id_ed25519 toto@IP_DU_VPS
+```
+
+Créer un alias pour se connecter avec une simple commande `ssh name-server` :
+
+```bash
+nano ~/.ssh/config
+```
+
+```text
+Host name-server
+    HostName IP_DU_VPS
+    User toto
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+```
+
+Connexion :
+
+```bash
+ssh name-server
 ```
 
 ## Récapitulatif

@@ -67,4 +67,4 @@ Pour utiliser `sudo` sans mot de passe, voir l'étape suivante (configuration vi
 
 ## Prochaine étape
 
-→ [03 — Sécurisation SSH](03-ssh-hardening.md)
+→ [03 — Durcissement du serveur](03-server-hardening.md)
