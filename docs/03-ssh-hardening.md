@@ -52,6 +52,28 @@ sudo systemctl restart ssh
 
 Garde une seconde session ouverte en secours jusqu'à validation.
 
+### 5. Configurer le pare-feu UFW
+
+```bash
+sudo apt install ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+```
+
+- **Trafic entrant** : bloqué par défaut
+- **Trafic sortant** : autorisé par défaut
+- **Ports explicitement autorisés** : 22 (SSH), 80 (HTTP), 443 (HTTPS)
+
+Vérifier les règles :
+
+```bash
+sudo ufw status verbose
+```
+
 ## Récapitulatif
 
 | Mesure                      | Effet                              |
@@ -61,6 +83,8 @@ Garde une seconde session ouverte en secours jusqu'à validation.
 | `PermitRootLogin no`        | Login root interdit via SSH        |
 | `AllowUsers toto`           | Limite les comptes autorisés       |
 | `MaxAuthTries 3`            | Limite les tentatives              |
+| UFW : entrant bloqué        | Refuse tout par défaut             |
+| UFW : ports 22, 80, 443     | Autorise SSH, HTTP, HTTPS          |
 
 ## Note
 
