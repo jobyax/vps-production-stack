@@ -64,3 +64,7 @@ root
 ## Note
 
 Pour utiliser `sudo` sans mot de passe, voir l'étape suivante (configuration via `visudo`).
+
+## Prochaine étape
+
+→ [03 — Sécurisation SSH](03-ssh-hardening.md)
