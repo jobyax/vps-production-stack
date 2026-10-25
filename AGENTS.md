@@ -11,13 +11,14 @@ Guides de configuration de VPS (Debian/Ubuntu) en Markdown dans `docs/`.
 - Une étape = un fichier Markdown
 - Commandes dans des blocs `bash`, sorties dans des blocs `text`
 - Utiliser des tableaux pour les récapitulatifs
-- Texte concis et professionnel, pas de blabla
+- Texte concis et professionnel
 
 ## Git
 
-- Branches : `préfixe/deux-mots` (ex : `docs/os-choice`)
-- Commits : `préfixe: message` — 2 à 6 mots, en anglais
-- Exemple : `docs: add sudo user guide`
+- Branches : `préfixe/deux-mots`
+  Exemples : `docs/traefik-setup`, `feat/firewall-rules`, `fix/ssh-config`, `chore/update-readme`
+- Commits : `préfixe: message` entre 2 à 6 mots, en anglais
+  Exemples : `docs: add traefik setup`, `feat: add ufw rules`, `fix: correct ssh port`, `chore: update index`
 
 ## Index
 
