@@ -42,6 +42,16 @@ SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
+## Mettre à jour le système
+
+Dès la première connexion, mets à jour le système :
+
+```bash
+sudo apt update
+sudo apt full-upgrade
+sudo apt autoremove
+```
+
 ## Prochaine étape
 
 → [02 — Création d'un utilisateur sudo](02-sudo-user.md)
