@@ -118,3 +118,7 @@ ssh name-server
 
 Une fois `PasswordAuthentication no` actif, seule la clé SSH permet la connexion.
 Ne ferme jamais ta session actuelle avant d'avoir validé la nouvelle.
+
+## Prochaine étape
+
+→ [04 — Installation de Docker Engine](04-docker-install.md)
